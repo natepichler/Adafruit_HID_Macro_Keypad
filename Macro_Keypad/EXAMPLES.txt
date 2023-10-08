@@ -1,0 +1,67 @@
+--------------------------------------------
+** Type your email **
+
+			layout.write('example@example.com')
+
+--------------------------------------------
+** Press the shortcut Control+Shift+P **
+
+			keyboard.send(Keycode.CONTROL,Keycode.SHIFT,Keycode.P)
+
+--------------------------------------------
+** Save and Close Window **
+
+			keyboard.send(Keycode.CONTROL,Keycode.S) #Save
+			time.sleep(0.1) #wait 100ms
+			keyboard.send(Keycode.RETURN) #Enter
+			time.sleep(0.1) #wait 100ms
+			keyboard.send(Keycode.ALT,Keycode.F4) #Close window
+
+--------------------------------------------
+** Open Notepad **
+
+			keyboard.send(Keycode.WINDOWS,Keycode.R)
+			time.sleep(0.1)
+			layout.write('notepad')
+			keyboard.send(Keycode.RETURN)
+
+--------------------------------------------
+** Search for Selected Text in New Browser Tab **
+
+			keyboard.send(Keycode.CONTROL,Keycode.C) #Copy selected text
+			time.sleep(0.1) #wait 100ms
+			keyboard.send(Keycode.CONTROL,Keycode.T) #Shortcut for new tab
+			time.sleep(0.1) #wait 100ms
+			keyboard.send(Keycode.CONTROL,Keycode.V) #Paste text
+			time.sleep(0.1) #wait 100ms
+			keyboard.send(Keycode.RETURN) #Enter
+
+--------------------------------------------
+** In Excel, Select Down, Fill Cells Blue, and add All Borders **
+
+
+			keyboard.send(Keycode.CONTROL,Keycode.SHIFT,Keycode.DOWN_ARROW)
+
+			keyboard.send(Keycode.ALT)
+			time.sleep(0.1)
+			layout.write('h')
+			time.sleep(0.1)
+			layout.write('h')
+			time.sleep(0.1)
+			keyboard.send(Keycode.RIGHT_ARROW)
+			keyboard.send(Keycode.RIGHT_ARROW)
+			keyboard.send(Keycode.RIGHT_ARROW)
+			keyboard.send(Keycode.DOWN_ARROW)
+			keyboard.send(Keycode.DOWN_ARROW)
+			keyboard.send(Keycode.RETURN)
+			time.sleep(0.1)
+
+			keyboard.send(Keycode.ALT)
+			time.sleep(0.1)
+			keyboard.send(Keycode.H)
+			time.sleep(0.1)
+			keyboard.send(Keycode.B)
+			time.sleep(0.1)
+			keyboard.send(Keycode.A)
+
+--------------------------------------------
